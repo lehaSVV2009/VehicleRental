@@ -4,7 +4,7 @@ import com.kadet.vehicleRental.controller.Controller;
 import com.kadet.vehicleRental.entity.Comment;
 import com.kadet.vehicleRental.entity.Ship;
 import com.kadet.vehicleRental.listeners.AddCommentListener;
-import com.kadet.vehicleRental.listeners.RentListener;
+import com.kadet.vehicleRental.listeners.OpenRentDialogListener;
 import com.kadet.vehicleRental.util.Messages;
 
 import javax.swing.*;
@@ -72,7 +72,7 @@ public class ShipInfoPanel extends ExtJPanel {
 
         rentShipButton = new ExtJButton(Messages.RENT_SHIP_BUTTON, parent.getController());
         rentShipButton.addActionListener(
-                new RentListener(code)
+                new OpenRentDialogListener(code)
         );
         add(rentShipButton);
     }

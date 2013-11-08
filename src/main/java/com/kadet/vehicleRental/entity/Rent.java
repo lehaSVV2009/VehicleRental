@@ -13,11 +13,11 @@ public class Rent {
 
     private Occupier occupier;
     private Ship ship;
-    private Integer price;
+    private Long price;
     private Date startDate;
     private Date endDate;
 
-    public Rent(Occupier occupier, Ship ship, Integer price, Date startDate, Date endDate) {
+    public Rent(Occupier occupier, Ship ship, Long price, Date startDate, Date endDate) {
         this.occupier = occupier;
         this.ship = ship;
         this.price = price;
@@ -33,7 +33,7 @@ public class Rent {
         return ship;
     }
 
-    public Integer getPrice() {
+    public Long getPrice() {
         return price;
     }
 
@@ -43,5 +43,16 @@ public class Rent {
 
     public Date getEndDate() {
         return endDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Rent{" +
+                "endDate=" + endDate +
+                ", startDate=" + startDate +
+                ", price=" + price +
+                ", ship=" + ship +
+                ", occupier=" + occupier +
+                '}';
     }
 }

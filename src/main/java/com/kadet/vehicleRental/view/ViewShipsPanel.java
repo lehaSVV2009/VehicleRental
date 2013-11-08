@@ -2,6 +2,8 @@ package com.kadet.vehicleRental.view;
 
 import com.kadet.vehicleRental.controller.Controller;
 import com.kadet.vehicleRental.entity.Ship;
+import com.kadet.vehicleRental.listeners.LogOutListener;
+import com.kadet.vehicleRental.util.Messages;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,6 +22,7 @@ public class ViewShipsPanel extends ExtJPanel {
 
     private ExtJPanel parent;
     private List<ShipInfoPanel> shipPanels;
+    private ExtJButton logOut;
 
     public ViewShipsPanel(ExtJPanel parent, List<Ship> ships) {
         this.parent = parent;
@@ -45,6 +48,11 @@ public class ViewShipsPanel extends ExtJPanel {
         for (ShipInfoPanel shipPanel : shipPanels) {
             add(shipPanel);
         }
+
+        logOut = new ExtJButton(Messages.LOG_OUT_BUTTON, parent.getController());
+        logOut.addActionListener(new LogOutListener());
+        add(logOut);
+
     }
 
     @Override

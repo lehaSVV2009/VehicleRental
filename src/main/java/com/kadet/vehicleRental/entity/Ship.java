@@ -13,10 +13,10 @@ public class Ship {
 
     private String code;
     private String name;
-    private Integer pricePerHour;
+    private Long pricePerHour;
     private List<Comment> comments;
 
-    public Ship(String code, String name, Integer pricePerHour, List<Comment> comments) {
+    public Ship(String code, String name, Long pricePerHour, List<Comment> comments) {
         this.code = code;
         this.name = name;
         this.pricePerHour = pricePerHour;
@@ -31,7 +31,7 @@ public class Ship {
         return name;
     }
 
-    public Integer getPricePerHour() {
+    public Long getPricePerHour() {
         return pricePerHour;
     }
 

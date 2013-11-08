@@ -37,4 +37,12 @@ public final class Messages {
     public static final String TO_LABEL = "To ";
     public static final String RENT_BUTTON = "Rent";
 
+    public static final String WRONG_INPUT_DATA = "Wrong input data!";
+    public static final String RENT_SUCCESS = "Ship rent is succeed";
+    public static final String SHIP_IS_ALSO_OCCUPIED = "Ship is also occupied ay this time";
+
+    public static final String SHOW_PRICE_BUTTON = "Show price";
+
+    public static final String LOG_OUT_BUTTON = "Log Out";
+
 }

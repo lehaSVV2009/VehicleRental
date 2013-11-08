@@ -72,4 +72,8 @@ public class MainFrame extends JFrame {
         mainPanel.closeRentDialog();
     }
 
+    public void showShipPrice (String price, String shipName) {
+        mainPanel.showShipPrice(price, shipName);
+    }
+
 }

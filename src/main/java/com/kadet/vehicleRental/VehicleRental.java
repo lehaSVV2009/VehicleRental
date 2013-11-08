@@ -17,7 +17,7 @@ public final class VehicleRental {
 
         final Controller controller = new Controller();
         final MainFrame mainFrame = new MainFrame(controller);
-        final Model model = new Model(controller);
+        final Model model = new Model();
         controller.setMainFrame(mainFrame);
         controller.setModel(model);
         mainFrame.setVisible(true);

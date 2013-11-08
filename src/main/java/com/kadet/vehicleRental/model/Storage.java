@@ -6,6 +6,7 @@ import com.kadet.vehicleRental.entity.Rent;
 import com.kadet.vehicleRental.entity.Ship;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -75,19 +76,33 @@ public class Storage {
         Ship ship1 = new Ship(
                 "#09sdf9",
                 "ship1",
-                1000,
+                (long)1,
                 comments
         );
 
         Ship ship2 = new Ship(
                 "#876sdfo9",
                 "Ship2",
-                300,
+                (long)3,
                 new ArrayList<Comment>()
         );
 
         ships.add(ship1);
         ships.add(ship2);
+
+
+        Date dateTo1 = new Date();
+        dateTo1.setTime(234234234);
+        Date dateTo2 = new Date();
+        dateTo2.setTime(438756234);
+        Rent rent = new Rent(
+                occupier1,
+                ship1,
+                ship1.getPricePerHour() * (dateTo2.getHours() - dateTo1.getHours()),
+                dateTo1,
+                dateTo2
+        );
+        rents.add(rent);
     }
 
     public List<Occupier> getOccupiers() {

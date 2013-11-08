@@ -13,20 +13,15 @@ import java.awt.event.ActionListener;
 /**
  * Created with IntelliJ IDEA.
  * User: Кадет
- * Date: 07.11.13
- * Time: 22:52
+ * Date: 08.11.13
+ * Time: 2:32
  * To change this template use File | Settings | File Templates.
  */
-public class RentListener implements ActionListener{
+public class ShowPriceListener extends RentListener {
 
-    protected JLabel shipCode;
-    protected TimePanel fromTimePanel;
-    protected TimePanel toTimePanel;
 
-    public RentListener(JLabel shipCode, TimePanel fromTimePanel, TimePanel toTimePanel) {
-        this.shipCode = shipCode;
-        this.fromTimePanel = fromTimePanel;
-        this.toTimePanel = toTimePanel;
+    public ShowPriceListener(JLabel shipCode, TimePanel fromTimePanel, TimePanel toTimePanel) {
+        super(shipCode, fromTimePanel, toTimePanel);
     }
 
     @Override
@@ -43,8 +38,6 @@ public class RentListener implements ActionListener{
                 Transformer.dateFromTimePanel(fromTimePanel),
                 Transformer.dateFromTimePanel(toTimePanel)
         );
-        controller.rent(rentForm);
+        controller.showPrice(rentForm);
     }
-
-
 }

@@ -70,6 +70,10 @@ public class MainPanel extends ExtJPanel {
         JOptionPane.showMessageDialog(this, message);
     }
 
+    public void showShipPrice (String price, String shipName) {
+        JOptionPane.showMessageDialog(this, shipName + ": " + price);
+    }
+
     @Override
     public Controller getController () {
         return parent.getController();
